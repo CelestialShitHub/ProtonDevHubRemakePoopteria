@@ -6,7 +6,7 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local Network = ReplicatedStorage:WaitForChild("network")
 
-local Signal = Network:WaitForChild("playerRequest_damageEntity_batch")
+local Signal = RemoteEvent:WaitForChild("playerRequest_damageEntity_batch")
 local PlayerRequest = {
     OpenTreasureChest = Network:WaitForChild("openTreasureChest"),
     UseTeleporter = Network:WaitForChild("playerRequest_useTeleporter"),
