@@ -6,13 +6,15 @@ local Mouse = Player:GetMouse()
 local TextService = game:GetService("TextService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Network = ReplicatedStorage:WaitForChild("network")
+local RemoteEvent = Network:WaitForChild("RemoteEvent")
 
-local Signal = Network:WaitForChild("playerRequest_damageEntity_batch")
+local Signal = RemoteEvent:WaitForChild("playerRequest_damageEntity_batch")
 local PlayerRequest = {
     OpenTreasureChest = Network:WaitForChild("openTreasureChest"),
     UseTeleporter = Network:WaitForChild("playerRequest_useTeleporter"),
     PickUpItem = Network:WaitForChild("pickUpItemRequest")
 }
+
 getgenv().library = {flags = {}}
 getgenv().running = false
 
