@@ -9,9 +9,9 @@ local RemoteEvent = Network:WaitForChild("RemoteEvent")
 local RemoteFunction = Network:WaitForChild("RemoteFunction")
 
 local Signal = game:GetService("ReplicatedStorage").network.RemoteEvent.playerRequest_damageEntity_batch
-local OpenTreasureChest = RemoteFunction:WaitForChild("openTreasureChest"),
-local UseTeleporter = RemoteFunction:WaitForChild("playerRequest_useTeleporter"),
-local PickUpItem = RemoteFunction:WaitForChild("pickUpItemRequest")
+local OpenTreasureChest = game:GetService("ReplicatedStorage").network.RemoteFunction.openTreasureChest
+local UseTeleporter = game:GetService("ReplicatedStorage").network.RemoteFunction.playerRequest_useTeleporter
+local PickUpItem = game:GetService("ReplicatedStorage").network.RemoteFunction.pickUpItemRequest
 
 getgenv().library = {flags = {}}
 getgenv().running = false
