@@ -5,12 +5,14 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local Network = ReplicatedStorage:WaitForChild("network")
+local RemoteEvent = Network:WaitForChild("RemoteEvent")
+local RemoteFunction = Network:WaitForChild("RemoteFunction")
 
 local Signal = RemoteEvent:WaitForChild("playerRequest_damageEntity_batch")
 local PlayerRequest = {
-    OpenTreasureChest = Network:WaitForChild("openTreasureChest"),
-    UseTeleporter = Network:WaitForChild("playerRequest_useTeleporter"),
-    PickUpItem = Network:WaitForChild("pickUpItemRequest")
+    OpenTreasureChest = RemoteFunction:WaitForChild("openTreasureChest"),
+    UseTeleporter = RemoteFunction:WaitForChild("playerRequest_useTeleporter"),
+    PickUpItem = RemoteFunction:WaitForChild("pickUpItemRequest")
 }
 
 getgenv().library = {flags = {}}
